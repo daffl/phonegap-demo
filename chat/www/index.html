@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Phonegap hello world</title>
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+</head>
+<body style="padding: 20px;">
+    <div class="container">
+        <div class="row">
+            <ul class="list-unstyled" id="messages"></ul>
+
+            <form role="form">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="message" placeholder="Enter message" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-lg btn-primary col-xs-12">Send message</button>
+                </div>
+            </form>
+            <button class="picture btn btn-lg col-xs-12">Take picture</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://localhost:8080/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var socket = io.connect('http://localhost:8080');
+
+            function addMessage(message) {
+                $('#messages').append('<li class="alert alert-success">' + message + '</li>');
+            }
+
+            function addImage(imageData) {
+                var img = $('<img alt="Photo" class="col-xs-12">');
+                img.attr('src', "data:image/jpeg;base64," + imageData);
+                $('#messages').append($('<li class="alert">').append(img));
+            }
+
+            $('form').submit(function(ev) {
+                var messageEl = $('#message');
+
+                socket.emit('message', messageEl.val());
+
+                messageEl.val('');
+                ev.preventDefault();
+            });
+
+            $('.picture').click(function() {
+                function onSuccess(imageData) {
+                    socket.emit('image', imageData);
+                }
+
+                function onFail(message) {
+                    alert('Failed because: ' + message);
+                }
+
+                navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+                    destinationType: Camera.DestinationType.DATA_URL
+                });
+            });
+
+            socket.on('image', addImage);
+            socket.on('message', addMessage);
+        });
+    </script>
+</body>
+</html>

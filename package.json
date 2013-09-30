@@ -1,0 +1,26 @@
+{
+  "name": "phonegap-demo",
+  "version": "0.0.1",
+  "description": "A NodeJS, SocketIO and Phonegap demo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/daffl/phonegap-demo.git"
+  },
+  "keywords": [
+    "phonegap",
+    "socketio"
+  ],
+  "author": "David Luecke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daffl/phonegap-demo/issues"
+  },
+  "dependencies": {
+    "socket.io": "~0.9.16",
+    "connect": "~2.9.0"
+  }
+}
