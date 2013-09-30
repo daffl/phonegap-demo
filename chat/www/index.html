@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Phonegap hello world</title>
+    <title>Phonegap Demo</title>
     <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
 </head>
 <body style="padding: 20px;">
@@ -18,16 +18,16 @@
                     <button type="submit" class="btn btn-lg btn-primary col-xs-12">Send message</button>
                 </div>
             </form>
-            <button class="picture btn btn-lg col-xs-12">Take picture</button>
+            <!-- <button class="picture btn btn-lg col-xs-12">Take picture</button> -->
         </div>
     </div>
 
     <script type="text/javascript" src="phonegap.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://localhost:8080/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="http://momo.neyeon.com/socket.io/socket.io.js"></script>
     <script type="text/javascript">
         $(function() {
-            var socket = io.connect('http://localhost:8080');
+            var socket = io.connect('http://momo.neyeon.com');
 
             function addMessage(message) {
                 $('#messages').append('<li class="alert alert-success">' + message + '</li>');
