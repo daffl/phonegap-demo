@@ -65,18 +65,18 @@
 
 ## Mobile UI
 
+### Separate
+
+Provide a separate mobile site, ideally communicating with the same API
+
+- [Topcoat](http://topcoat.io/)
+
 ### Responsive
 
 Change styles based on screen resolution
 
 - [Twitter Bootstrap](http://getbootstrap.com/)
 - [Zurb Foundation](http://foundation.zurb.com/)
-
-### Separate
-
-Provide a separate mobile site, ideally communicating with the same API
-
-- [Topcoat](http://topcoat.io/)
 
 ---
 
@@ -113,7 +113,8 @@ Touch & Gestures
 
 Easily create apps using the web technologies you know and love: __HTML__, __CSS__, and __JavaScript__
 
-> npm install phonegap
+    npm install phonegap
+
 
 - Wraps your web application as a native mobile app
 - Access the device hardware (camera, GPS etc.) via JavaScript
@@ -125,9 +126,25 @@ Easily create apps using the web technologies you know and love: __HTML__, __CSS
 
 ## Coding!
 
+Lets build a real-time, mobile-friendly chat using
+
+- jQuery
+- Twitter Bootstrap
+- NodeJS
+- SocketIO
+
+We'll also make it possible to take and share pictures.
+
 ---
 
 ## Next Month
 
-* Something awesome
-* More awesomeness
+### Cool things you can do with JS
+
+<img alt="Robot" src="images/robot.png" style="float: right; margin-right: 10em;" />
+
+* Show & Tell
+* 3D & Animation
+* Node & Raspberry Pi
+* Robots & Drones
+
