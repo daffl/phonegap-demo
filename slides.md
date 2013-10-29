@@ -69,32 +69,57 @@
 
 Change styles based on screen resolution
 
-- [Twitter Bootstrap]()
-- [Foundation]()
+- [Twitter Bootstrap](http://getbootstrap.com/)
+- [Zurb Foundation](http://foundation.zurb.com/)
 
 ### Separate
 
 Provide a separate mobile site, ideally communicating with the same API
 
-- [Topcoat]()
+- [Topcoat](http://topcoat.io/)
 
 ---
 
-## Twitter Bootstrap
+## [Twitter Bootstrap](http://getbootstrap.com/)
+
+Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.
+
+- Mobile first
+- Responsive design
+- CSS components (Buttons, progress bars, pagination etc.)
+- jQuery plugins
+
+![Bootstrap logo](images/bootstrap-logo.png)
 
 ---
 
-## Mobile UX
+## Mobile web libraries
 
-Use Touch events
+Mobile development
+
+- [Zepto](http://zeptojs.com/)
+- [jQuery mobile](http://jquerymobile.com/)
+- [Sencha Touch](http://www.sencha.com/products/touch)
+- [Titanium Mobile](http://www.appcelerator.com/products/titanium-mobile-application-development/)
+
+Touch & Gestures
+
+- [HammerJS](http://eightmedia.github.io/hammer.js/)
+- [Caress](http://caressjs.com/)
 
 ---
 
-## Device access
+## [Phonegap]()
 
----
+Easily create apps using the web technologies you know and love: __HTML__, __CSS__, and __JavaScript__
 
-## Phonegap
+> npm install phonegap
+
+- Wraps your web application as a native mobile app
+- Access the device hardware (camera, GPS etc.) via JavaScript
+- Supports iOS, Android, Windows 8 and more
+
+![Phonegap Logo](images/phonegap-logo.png)
 
 ---
 
