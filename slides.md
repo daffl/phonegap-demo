@@ -43,8 +43,7 @@
     * JS application SEO
 * Internationalization
     * Domain and URL tips
-    * JED
-    * jQuery Globalize
+    * I18N libraries
     * Server side tools
 * FeathersJS
 
@@ -131,7 +130,7 @@ Lets build a real-time, mobile-friendly chat using
 - jQuery
 - Twitter Bootstrap
 - NodeJS
-- SocketIO
+- Feathers & SocketIO
 
 We'll also make it possible to take and share pictures.
 
